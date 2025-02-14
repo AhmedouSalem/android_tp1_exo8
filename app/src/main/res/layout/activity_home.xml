@@ -1,0 +1,298 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@android:color/white"
+    android:fillViewport="true"
+    tools:context=".HomeActivity">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:padding="16dp"
+        android:orientation="vertical">
+
+        <TextView
+            android:id="@+id/textView"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="@string/hello"
+            android:textSize="18sp" />
+
+        <TextView
+            android:id="@+id/textView4"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="@string/choose_your_destination"
+            android:textSize="25sp"
+            android:textStyle="bold" />
+
+        <LinearLayout
+            android:id="@+id/linearLayoutId1"
+            style="@style/RoundedBackground50dp"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginVertical="14dp"
+            android:orientation="horizontal">
+
+            <com.google.android.material.button.MaterialButton
+                android:id="@+id/buttonRoundTrip"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginEnd="16dp"
+                android:layout_weight="1"
+                android:drawableLeft="@drawable/bidirectionnel"
+                android:drawableTint="@color/white"
+                android:text="@string/round_trip"
+                app:backgroundTint="@color/primary" />
+
+            <com.google.android.material.button.MaterialButton
+                android:id="@+id/buttonOneWay"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:drawableLeft="@drawable/fleche"
+                android:text="@string/one_way"
+                android:textColor="@color/black"
+                app:backgroundTint="@color/secondColor" />
+        </LinearLayout>
+
+        <LinearLayout
+            android:id="@+id/linearLayoutId2"
+            style="@style/RoundedBackground10dp"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical"
+            android:padding="12dp">
+
+            <TableLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                style="@style/tableFormBackground"
+                android:padding="10dp"
+                android:shrinkColumns="0"
+                android:stretchColumns="1"
+                android:orientation="vertical">
+
+                <TableRow
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content">
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginEnd="6dp"
+                        android:textSize="18sp"
+                        android:text="@string/from" />
+
+                    <AutoCompleteTextView
+                        android:id="@+id/editTextDeparture"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:background="@drawable/no_border"
+                        android:drawableRight="@drawable/train_depart"
+                        android:drawablePadding="10dp"
+                        android:hint="@string/city"
+                        android:inputType="text" />
+                </TableRow>
+
+                <TableRow
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginVertical="10dp">
+
+                    <ImageView
+                        android:id="@+id/changeOrderDepartArrival"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:background="@drawable/changelocation_background"
+                        android:src="@drawable/fleche_haut_et_bas"
+                        android:layout_gravity="right"
+                        android:clickable="true"
+                        android:layout_span="2"
+                        />
+                </TableRow>
+
+                <TableRow
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content">
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginEnd="6dp"
+                        android:textSize="18sp"
+                        android:text="@string/to" />
+
+                    <AutoCompleteTextView
+                        android:id="@+id/editTextArrival"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:background="@drawable/no_border"
+                        android:drawableRight="@drawable/train_arrival"
+                        android:drawablePadding="10dp"
+                        android:hint="@string/city"
+                        android:inputType="text" />
+                </TableRow>
+
+            </TableLayout>
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                style="@style/RoundedBackground10dp"
+                android:layout_marginVertical="16dp"
+                android:orientation="horizontal">
+
+                <!-- Départ -->
+                <com.google.android.material.textfield.TextInputLayout
+                    android:id="@+id/departDateLayout"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    style="@style/dateFieldBackground"
+                    android:paddingTop="5dp"
+                    android:hint="@string/Depart">
+
+                    <com.google.android.material.textfield.TextInputEditText
+                        android:id="@+id/departDate"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:inputType="date"
+                        android:drawableLeft="@drawable/calandre"
+                        android:drawablePadding="8dp"
+                        android:background="@drawable/no_border"
+                        android:focusable="false" />
+                </com.google.android.material.textfield.TextInputLayout>
+
+                <!-- Retour -->
+                <com.google.android.material.textfield.TextInputLayout
+                    android:id="@+id/returnDateLayout"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:paddingTop="5dp"
+                    android:layout_marginStart="8dp"
+                    style="@style/dateFieldBackground"
+                    android:hint="@string/return_">
+
+                    <com.google.android.material.textfield.TextInputEditText
+                        android:id="@+id/returnDate"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:inputType="date"
+                        android:drawableLeft="@drawable/calandre"
+                        android:drawablePadding="8dp"
+                        android:background="@drawable/no_border"
+                        android:focusable="false" />
+                </com.google.android.material.textfield.TextInputLayout>
+            </LinearLayout>
+
+            <com.google.android.material.button.MaterialButton
+                android:id="@+id/searchButton"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:gravity="center"
+                android:paddingVertical="10dp"
+                android:backgroundTint="@color/primary"
+                android:textColor="@color/white"
+                android:text="@string/search" />
+
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal"
+            android:layout_marginVertical="12dp"
+            >
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:textSize="20sp"
+                android:textStyle="bold"
+                android:text="@string/upcoming_trips" />
+            <TextView
+                android:id="@+id/handleAllWay"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:textSize="16sp"
+                android:textStyle="bold"
+                android:layout_weight="1"
+                android:gravity="right"
+                android:clickable="true"
+                android:textColor="@android:color/holo_orange_light"
+                android:text="@string/see_more" />
+        </LinearLayout>
+
+        <LinearLayout
+            android:id="@+id/upcomingTripsContainer"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical">
+        </LinearLayout>
+
+        <!-- <TableLayout
+             android:layout_width="match_parent"
+             android:layout_height="wrap_content"
+             android:shrinkColumns="0,2"
+             android:stretchColumns="1"
+             android:padding="20dp"
+             style="@style/RoundedBackground10dp"
+             >
+             <TableRow >
+                 <TextView
+                     android:text="STP"
+                     android:textColor="@android:color/darker_gray" />
+                 <TextView
+                     android:gravity="center"
+                     android:text="16 Sep 2024"
+                     android:textColor="@android:color/darker_gray" />
+                 <TextView
+                     android:text="XPG"
+                     android:textColor="@android:color/darker_gray" />
+             </TableRow>
+             <TableRow >
+                 <TextView
+                     android:textStyle="bold"
+                     android:textSize="18sp"
+                     android:text="London" />
+                 <LinearLayout android:orientation="horizontal" android:layout_width="match_parent" android:layout_gravity="center">
+                     <ImageView
+                         android:layout_width="wrap_content"
+                         android:layout_height="wrap_content"
+                         android:src="@drawable/train_depart"
+                         />
+                     <ImageView
+                         android:layout_width="wrap_content"
+                         android:layout_height="wrap_content"
+                         android:src="@drawable/trajet"
+                         />
+                 </LinearLayout>
+                 <TextView
+                     android:textStyle="bold"
+                     android:textSize="18sp"
+                     android:text="Paris"
+                     android:textColor="@android:color/darker_gray" />
+             </TableRow>
+             <TableRow >
+                 <TextView
+                     android:textStyle="bold"
+                     android:textSize="12sp"
+                     android:text="12:30" />
+                 <TextView
+                     android:gravity="center"
+                     android:text="2h 18m" />
+                 <TextView
+                     android:textStyle="bold"
+                     android:textSize="12sp"
+                     android:text="14:50"
+                     android:textColor="@android:color/darker_gray" />
+             </TableRow>
+         </TableLayout> -->
+
+     </LinearLayout>
+
+ </ScrollView>

@@ -1,0 +1,21 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <!-- Style pour le layout avec un rayon de 50dp -->
+    <style name="RoundedBackground50dp">
+        <item name="android:background">@drawable/linearlayout_background_50dp</item>
+    </style>
+
+    <!-- Style pour le layout avec un rayon de 10dp -->
+    <style name="RoundedBackground10dp">
+        <item name="android:background">@drawable/linearlayout_background_10dp</item>
+    </style>
+
+    <style name="tableFormBackground">
+        <item name="android:background">@drawable/form_background</item>
+    </style>
+
+    <style name="dateFieldBackground">
+        <item name="android:background">@drawable/form_background</item>
+    </style>
+</resources>
+

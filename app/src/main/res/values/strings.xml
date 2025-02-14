@@ -1,0 +1,25 @@
+<resources>
+    <string name="app_name">RailWise</string>
+    <string name="onboarding_title">Choo-Choo vers votre prochaine destination</string>
+    <string name="onboarding_subtitle">Découvrez la manière la plus simple de planifier, réserver et gérer vos trajets en train.</string>
+    <string name="onboarding_buttontitle">Allons-y !</string>
+    <string name="already_have_an_account">Vous avez déjà un compte ?</string>
+    <string name="login">Se connecter</string>
+    <string name="hello">Bonjour,</string>
+    <string name="choose_your_destination">Choisissez votre destination</string>
+    <string name="round_trip">Aller-retour</string>
+    <string name="one_way">Aller simple</string>
+    <string name="from">De :</string>
+    <string name="city">Ville</string>
+    <string name="to">À :</string>
+    <string name="Depart">Départ</string>
+    <string name="return_">Retour</string>
+    <string name="search">Rechercher</string>
+    <string name="upcoming_trips">Prochains voyages</string>
+    <string name="see_more">Voir plus</string>
+    <string name="ifempty_from">Veuillez saisir la ville de départ</string>
+    <string name="ifempty_to">Veuillez saisir la ville d\'arrivée</string>
+    <string name="ifempty_departdate">Veuillez sélectionner une date de départ</string>
+    <string name="ifdepartcityeqarrivalcity">La ville de départ et la ville d\'arrivée ne peuvent pas être identiques</string>
+    <string name="notripsforthisroute">Aucun trajet trouvé pour cet itinéraire</string>
+</resources>
